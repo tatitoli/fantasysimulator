@@ -4,6 +4,17 @@
 	<groupId>rpg.fantasysimulator</groupId>
 	<artifactId>FantasySimulator</artifactId>
 	<version>1.0</version>
+	<developers>
+		<developer>
+			<id>tatitoli</id>
+			<name>Szászi Zoltán</name>
+			<email>diirhun@gmail.com</email>
+		</developer>
+	</developers>
+	<inceptionYear>2016</inceptionYear>
+	<organization>
+		<name>Szászi Zoltán</name>
+	</organization>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
