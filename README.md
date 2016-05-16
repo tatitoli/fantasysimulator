@@ -1,0 +1,1 @@
+Fantasy harc szimulátor, amelyben 2 játékos különböző fajokból választhat és előre meghatározott jártasság pontot oszthat szét a   karakter 2 fő tulajdonsága között. A harc menete körökre osztott és valamely játékos „haláláig” tart.
