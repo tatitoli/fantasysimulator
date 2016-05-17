@@ -124,11 +124,11 @@ public class FightController {
 	@FXML
 	public void midButton(){
 		if("Start".equals(startButton.getText())){
-			startButton.setText("Ment�s");
+			startButton.setText("Mentés");
 			startGame();
-		}else if("Ment�s".equals(startButton.getText())){
+		}else if("Mentés".equals(startButton.getText())){
 			saveGame();
-		}else if("Bez�r".equals(startButton.getText())){
+		}else if("Bezár".equals(startButton.getText())){
 			Stage actualStage = (Stage) startButton.getScene().getWindow();
 			actualStage.close();
 		}
@@ -179,7 +179,7 @@ public class FightController {
 		messageOne.setText("");
 		messageTwo.setText("");
 		rollNumber.setText("");
-		startButton.setText("Bez�r");
+		startButton.setText("Bezár");
 		game.setId(makeid());
 		game.setPlayers(playerList);
 		game.setWhoWin(player.getName());
@@ -188,25 +188,25 @@ public class FightController {
 		gamesList.add(game);
 		gameDao.saveGames(gamesList,"game.xml");
 		Alert alert = new Alert(AlertType.INFORMATION);
-		alert.setTitle("V�ge a harcnak");
+		alert.setTitle("Vége a harcnak");
 		alert.setHeaderText(null);
-		alert.setContentText("Gratul�lok, " + player.getName()+ " j�tt ki gy�ztesen a k�zdelemb�l!");
+		alert.setContentText("Gratulálok, " + player.getName()+ " jött ki győztesen a küzdelemből!");
 		alert.showAndWait();
 	}
 
 	public void dialogCriticalHit() {
 		Alert alert = new Alert(AlertType.WARNING);
-		alert.setTitle("Sz�p munka");
+		alert.setTitle("Szép munka");
 		alert.setHeaderText(null);
-		alert.setContentText("Kritikus tal�lat");
+		alert.setContentText("Kritikus találat");
 		alert.showAndWait();
 	}
 
 	public void hit() {
 		Alert alert = new Alert(AlertType.WARNING);
-		alert.setTitle("Sz�p munka");
+		alert.setTitle("Szép munka");
 		alert.setHeaderText(null);
-		alert.setContentText("Tal�lat");
+		alert.setContentText("Találat");
 		alert.showAndWait();
 	}
 
@@ -286,7 +286,7 @@ public class FightController {
 			message.setText(nameOne.getText() + " következik!");
 			rollOne.setVisible(true);
 			rollTwo.setVisible(false);
-			messageOne.setText("K�rlek dobj!");
+			messageOne.setText("Kérlek dobj!");
 			messageTwo.setText("");
 
 		} else {
