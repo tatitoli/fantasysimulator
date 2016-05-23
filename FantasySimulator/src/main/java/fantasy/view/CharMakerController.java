@@ -313,20 +313,20 @@ public class CharMakerController {
 		if(hasPointOne!=0 || hasPointTwo!=0){
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("Hiba");
-			alert.setHeaderText("Figyelmeztet� �zenet:");
-			alert.setContentText("Nincs minden 'Kioszthat� pontok' kiosztva!");
+			alert.setHeaderText("Figyelmeztető üzenet:");
+			alert.setContentText("Nincs minden 'Kiosztható pontok' kiosztva!");
 			alert.showAndWait();
 		}else if(nameOne.getText().equals("") || nameTwo.getText().equals("")){
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("Hiba");
-			alert.setHeaderText("Figyelmeztet� �zenet:");
-			alert.setContentText("Nincs n�v megadva!");
+			alert.setHeaderText("Figyelmeztető üzenet:");
+			alert.setContentText("Nincs név megadva!");
 			alert.showAndWait();
 		}else if(raceTwo.getSelectionModel().getSelectedItem()==null || raceOne.getSelectionModel().getSelectedItem()==null){
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("Hiba");
-			alert.setHeaderText("Figyelmeztet� �zenet:");
-			alert.setContentText("Faj nincs kiv�lasztva!");
+			alert.setHeaderText("Figyelmeztető üzenet:");
+			alert.setContentText("Faj nincs kiválasztva!");
 			alert.showAndWait();
 		}else{
 			String mp = mpOne.getText();
