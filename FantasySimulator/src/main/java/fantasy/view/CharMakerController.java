@@ -27,6 +27,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+//CHECKSTYLE:OFF
 public class CharMakerController {
 	
 	private LocalDateTime localDateTime;
@@ -315,18 +316,21 @@ public class CharMakerController {
 			alert.setTitle("Hiba");
 			alert.setHeaderText("Figyelmeztető üzenet:");
 			alert.setContentText("Nincs minden 'Kiosztható pontok' kiosztva!");
+			Logger.warn("Nincs minden 'Kiosztható pontok' kiosztva!");
 			alert.showAndWait();
 		}else if(nameOne.getText().equals("") || nameTwo.getText().equals("")){
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("Hiba");
 			alert.setHeaderText("Figyelmeztető üzenet:");
 			alert.setContentText("Nincs név megadva!");
+			Logger.warn("Nincs név megadva!");
 			alert.showAndWait();
 		}else if(raceTwo.getSelectionModel().getSelectedItem()==null || raceOne.getSelectionModel().getSelectedItem()==null){
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("Hiba");
 			alert.setHeaderText("Figyelmeztető üzenet:");
 			alert.setContentText("Faj nincs kiválasztva!");
+			Logger.warn("Faj nincs kiválasztva!");
 			alert.showAndWait();
 		}else{
 			String mp = mpOne.getText();
@@ -360,6 +364,7 @@ public class CharMakerController {
 				stage.show();
 				Stage actualStage = (Stage) nextButton.getScene().getWindow();
 				actualStage.close();
+				Logger.info("Meccs kezdete");
 				
 			} catch (IOException e) {
 				Logger.error(e.getMessage());

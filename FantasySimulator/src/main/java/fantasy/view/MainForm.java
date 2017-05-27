@@ -27,6 +27,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+
+//CHECKSTYLE:OFF
 public class MainForm extends Application {
 	private ObservableList<GameTable> gameDataList = FXCollections.observableArrayList();
 	private Games gamesList = new Games();
@@ -57,7 +59,6 @@ public class MainForm extends Application {
 		try {
 			loadGame();
 		} catch (JAXBException e) {
-			// TODO Auto-generated catch block
 			Logger.error(e.getMessage());
 		}
 		if (gamesList.getGames() != null) {
@@ -77,6 +78,7 @@ public class MainForm extends Application {
 			primaryStage.setTitle("Főoldal");
 			primaryStage.setResizable(false);
 			primaryStage.show();
+			Logger.info("Főoldal betöltése");
 		} catch (Exception e) {
 			Logger.error(e.getMessage());
 		}
@@ -98,11 +100,10 @@ public class MainForm extends Application {
 			Stage stage = new Stage();
 			stage.setTitle("Korábbi meccsek");
 			stage.initModality(Modality.WINDOW_MODAL);
-
 			Scene scene = new Scene(score);
 			stage.setScene(scene);
 			stage.show();
-
+			Logger.info("Korábbi mecccsek betöltése");
 		} catch (IOException e) {
 			Logger.error(e.getMessage());
 		}
@@ -119,6 +120,7 @@ public class MainForm extends Application {
 			stage.setTitle("Karakterek generálása");
 			stage.setResizable(false);
 			stage.show();
+			Logger.info("Új játék kezdete");
 		} catch (Exception e) {
 			Logger.error(e.getMessage());
 		}
@@ -145,6 +147,7 @@ public class MainForm extends Application {
 				controller.setTurnsList(turnByPlayers);
 				stage.setResizable(false);
 				stage.show();
+				Logger.info("Mentett állás betöltése");
 
 			} catch (IOException e) {
 				Logger.error(e.getMessage());

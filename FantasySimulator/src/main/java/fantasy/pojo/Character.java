@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * @author TATITOLI
+ * 
  * Karakter generáláshoz szükséges osztály
  *
  */
@@ -12,46 +13,46 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Character {
 	
 	/**
-	 *  Faj
+	 *  Faj.
 	 */
 	String race;
 	/**
-	 *  Életerő
+	 *  Életerő.
 	 */
 	int healPoints;
 	/**
-	 * Erő
+	 * Erő.
 	 */
 	int str;
 	/**
-	 * Ügyesség
+	 * Ügyesség.
 	 */
 	double dex;
 	/**
-	 * Támadó érték
+	 * Támadó érték.
 	 */
 	int attackPoints;
 	/**
-	 * Védő érték
+	 * Védő érték.
 	 */
 	double defensePoints;
 	/**
-	 * Mozgáspont
+	 * Mozgáspont.
 	 */
 	double movingPoints;
 
-	
 	/**
-	 * Paraméter nélküli konstruktor
+	 * Paraméter nélküli konstruktor.
 	 */
 	public Character() {
 	}
 
 	/**
-	 * Paraméteres kontruktor
+	 * Paraméteres kontruktor.
+	 * 
 	 * @param race - faj
 	 * @param healPoints - életerő
-	 * @param str -erő
+	 * @param str - erő
 	 * @param dex - ügyesség
 	 * @param attackPoints - támadópont
 	 * @param defensePoints - védekezőpont
@@ -69,7 +70,7 @@ public class Character {
 	}
 
 	/**
-	 * Visszaadja a karater faját
+	 * Visszaadja a karater faját.
 	 * 
 	 * @return faj
 	 */
@@ -78,7 +79,7 @@ public class Character {
 	}
 	
 	/**
-	 * Beállítja a karakter faját
+	 * Beállítja a karakter faját.
 	 * 
 	 * @param race - faj
 	 */
@@ -88,7 +89,7 @@ public class Character {
 	}
 	
 	/**
-	 * Visszaadja a karater életerejét
+	 * Visszaadja a karater életerejét.
 	 * 
 	 * @return életerő pont
 	 */
@@ -97,9 +98,9 @@ public class Character {
 	}
 
 	/**
-	 * Beállítja a karakter életerejét
+	 * Beállítja a karakter életerejét.
 	 * 
-	 * @param healPoints életerőpont
+	 * @param healPoints - életerőpont
 	 */
 	@XmlElement
 	public void setHealPoints(int healPoints) {
@@ -107,7 +108,7 @@ public class Character {
 	}
 
 	/**
-	 * Visszaadja a karater támadó értékét
+	 * Visszaadja a karater támadó értékét.
 	 * 
 	 * @return támadóérték
 	 */
@@ -116,7 +117,7 @@ public class Character {
 	}
 
 	/**
-	 * Beállítja a karakter támadó értékét
+	 * Beállítja a karakter támadó értékét.
 	 * 
 	 * @param attackPoints - támadó érték
 	 */
@@ -125,9 +126,8 @@ public class Character {
 		this.attackPoints = attackPoints;
 	}
 
-	
 	/**
-	 * Visszaadja a karater védő értékét
+	 * Visszaadja a karater védő értékét.
 	 * 
 	 * @return védőérték
 	 */
@@ -136,7 +136,7 @@ public class Character {
 	}
 
 	/**
-	 * Beállítja a karakter védő értékét
+	 * Beállítja a karakter védő értékét.
 	 * 
 	 * @param defensePoints - védőérték
 	 */
@@ -146,7 +146,7 @@ public class Character {
 	}
 
 	/**
-	 * Visszaadja a karater mozgáspontját
+	 * Visszaadja a karater mozgáspontját.
 	 * 
 	 * @return mozgáspont
 	 */
@@ -155,7 +155,7 @@ public class Character {
 	}
 
 	/**
-	 * Beállítja a karakter mozgáspontját
+	 * Beállítja a karakter mozgáspontját.
 	 * 
 	 * @param movingPoints - mozgáspont
 	 */
@@ -165,7 +165,7 @@ public class Character {
 	}
 
 	/**
-	 * Visszaadja a karater erejét
+	 * Visszaadja a karater erejét.
 	 * 
 	 * @return erő
 	 */
@@ -174,7 +174,7 @@ public class Character {
 	}
 	
 	/**
-	 * Beállítja a karakter erejét
+	 * Beállítja a karakter erejét.
 	 * 
 	 * @param str - erő
 	 */
@@ -184,7 +184,7 @@ public class Character {
 	}
 	
 	/**
-	 * Visszaadja a karater ügyességét
+	 * Visszaadja a karater ügyességét.
 	 * 
 	 * @return ügyesség
 	 */
@@ -193,7 +193,7 @@ public class Character {
 	}
 	
 	/**
-	 * Beállítja a karakter ügyességét
+	 * Beállítja a karakter ügyességét.
 	 * 
 	 * @param dex - ügyesség
 	 */

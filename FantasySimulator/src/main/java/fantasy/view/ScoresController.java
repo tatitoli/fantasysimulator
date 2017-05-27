@@ -16,6 +16,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
+//CHECKSTYLE:OFF
 public class ScoresController {
 	private ObservableList<GameTable> gameDataList = FXCollections.observableArrayList();
 	private Games gamesList = new Games();

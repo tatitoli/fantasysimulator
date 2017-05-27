@@ -5,32 +5,36 @@ import javafx.beans.property.StringProperty;
 
 /**
  * @author TATITOLI
- * Az eddig lejátszott játékok egy megjelenítését reprezentáló osztály
+ * 
+ * Az eddig lejátszott játékok egy megjelenítését reprezentáló osztály.
  *
  */
 public class GameTable {
 	
 	/**
-	 * Egyedi azonosító
+	 * Egyedi azonosító.
 	 */
 	private String id;
-	/**
-	 * Első játékos
+	
+	/** 
+	 * Első játékos.
 	 */
 	private StringProperty playerOne;
+	
 	/**
-	 * Második játékos
+	 * Második játékos.
 	 */
 	private StringProperty playerTwo;
+	
 	/**
-	 * Játék győztese
+	 * Játék győztese.
 	 */
 	private StringProperty who;
 
 	/**
-	 * Paraméteres konstruktor
+	 * Paraméteres konstruktor.
 	 * 
-	 * @param id -egyedi azonosító
+	 * @param id - egyedi azonosító
 	 * @param playerOne - első játékos
 	 * @param playerTwo - második játékos
 	 * @param who - játék győztese
@@ -43,7 +47,7 @@ public class GameTable {
 	}
 	
 	/**
-	 * Visszadja a első játékost
+	 * Visszadja a első játékost.
 	 * 
 	 * @return játékos
 	 */
@@ -53,7 +57,7 @@ public class GameTable {
 
 	/**
 	 * 
-	 * Beállítja az első játékos
+	 * Beállítja az első játékos.
 	 * 
 	 * @param playerOne - játékos
 	 */
@@ -62,7 +66,7 @@ public class GameTable {
 	}
 	
 	/**
-	 * Visszadja a első játékost
+	 * Visszadja a első játékost egy {@link javafx.beans.property.StringProperty} objektumként.
 	 * 
 	 * @return játékos
 	 */
@@ -71,7 +75,7 @@ public class GameTable {
 	}
 
 	/**
-	 * Visszadja a második játékost
+	 * Visszadja a második játékost.
 	 * 
 	 * @return játékos
 	 */
@@ -80,7 +84,7 @@ public class GameTable {
 	}
 
 	/**
-	 * Beállítja a második játékost
+	 * Beállítja a második játékost.
 	 * 
 	 * @param playerTwo - játékos
 	 */
@@ -89,7 +93,7 @@ public class GameTable {
 	}
 	
 	/**
-	 * Visszadja a második játékost
+	 * Visszadja a második játékost egy {@link javafx.beans.property.StringProperty} objektumként.
 	 * 
 	 * @return játékos
 	 */
@@ -98,7 +102,7 @@ public class GameTable {
 	}
 
 	/**
-	 * Visszadja a játék győztesét
+	 * Visszadja a játék győztesét.
 	 * 
 	 * @return - győztes
 	 */
@@ -107,7 +111,7 @@ public class GameTable {
 	}
 
 	/**
-	 * Beállítja a játék győztesét
+	 * Beállítja a játék győztesét.
 	 * 
 	 * @param who - győztes
 	 */
@@ -116,7 +120,7 @@ public class GameTable {
 	}
 	
 	/**
-	 * Visszadja a játék győztesét
+	 * Visszadja a játék győztesét.
 	 * 
 	 * @return győztes
 	 */
@@ -125,9 +129,9 @@ public class GameTable {
 	}
 
 	/**
-	 * Beállítja az első játékos
+	 * Beállítja az első játékos.
 	 * 
-	 * @param playerOne - játékos
+	 * @param playerOne - játékos, ami egy {@link javafx.beans.property.StringProperty} objektum
 	 */
 	public void setPlayerOne(StringProperty playerOne) {
 		this.playerOne = playerOne;
@@ -136,23 +140,23 @@ public class GameTable {
 	/**
 	 * Beállítja a második játékost
 	 * 
-	 * @param playerTwo - játékos
+	 * @param playerTwo - játékos, ami egy egy {@link javafx.beans.property.StringProperty} objektum
 	 */
 	public void setPlayerTwo(StringProperty playerTwo) {
 		this.playerTwo = playerTwo;
 	}
 
 	/**
-	 * Visszadja a játék győztesét
+	 * Visszadja a játék győztesét.
 	 * 
-	 * @return győztes
+	 * @param who - győztes, egy {@link javafx.beans.property.StringProperty} objektum
 	 */
 	public void setWho(StringProperty who) {
 		this.who = who;
 	}
 
 	/**
-	 * Visszaadja az a játék egyedi azonosítóját
+	 * Visszaadja az a játék egyedi azonosítóját.
 	 * 
 	 * @return egyedi azonosító
 	 */
@@ -161,7 +165,7 @@ public class GameTable {
 	}
 
 	/**
-	 * Beállítja a játék egyedi azonosítóját
+	 * Beállítja a játék egyedi azonosítóját.
 	 * 
 	 * @param id - egyedi azonosító
 	 */

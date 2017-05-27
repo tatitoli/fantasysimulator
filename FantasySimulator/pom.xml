@@ -4,6 +4,19 @@
 	<groupId>rpg.fantasysimulator</groupId>
 	<artifactId>FantasySimulator</artifactId>
 	<version>1.0</version>
+	<name>Fantasy Szimulator</name>
+	<description>Harc szimulálása fantasy karakterekkel</description>
+	<scm>
+		<url>https://github.com/tatitoli/fantasysimulator</url>
+		<connection>scm:git:git://github.com/tatitoli/fantasysimulator.git</connection>
+		<developerConnection>scm:git:git@github.com:tatitoli/fantasysimulator.git</developerConnection>
+	</scm>
+	<licenses>
+		<license>
+			<name>GNU GENERAL PUBLIC LICENSE, Version 3</name>
+			<url>http://www.gnu.org/licenses/gpl-3.0.html</url>
+		</license>
+	</licenses>
 	<developers>
 		<developer>
 			<id>tatitoli</id>
@@ -17,6 +30,7 @@
 	</organization>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 	<dependencies>
@@ -94,8 +108,32 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<phase>package</phase>
+						<configuration>
+							<transformers>
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+									<mainClass>
+										fantasy.view.MainForm
+									</mainClass>
+								</transformer>
+							</transformers>
+							<shadedArtifactAttached>true</shadedArtifactAttached>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.6</version>
+				<version>3.0.0</version>
 				<executions>
 					<execution>
 						<goals>
@@ -128,7 +166,7 @@
 				<reportSets>
 					<reportSet>
 						<reports>
-							<report>checkstyle</report>
+							<report>checkstyle-aggregate</report>
 						</reports>
 					</reportSet>
 				</reportSets>
@@ -147,6 +185,11 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
 				<version>2.7</version>
+			</plugin>
+			<plugin>
+				<groupId>com.zenjava</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>8.4.0</version>
 			</plugin>
 		</plugins>
 	</reporting>

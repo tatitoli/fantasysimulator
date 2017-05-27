@@ -6,35 +6,39 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * @author TATITOLI
- * Játékhoz szülséges osztály
+ * 
+ * Egy játékmenethez szükséges osztály.
  *
  */
 @XmlRootElement(name="game")
 public class Game {
+	
 	/**
-	 * Játék egyedi azonosítója
+	 * Játék egyedi azonosítója.
 	 */
 	String id;
+	
 	/**
-	 * Játékban részvevő játékosok
+	 * Játékban részvevő játékosok.
 	 */
 	Players players;
+	
 	/**
-	 * Játék győztese
+	 * Játék győztese.
 	 */
 	String whoWin;
 
 	/**
-	 *  Paraméter nélküli konstruktor
+	 *  Paraméter nélküli konstruktor.
 	 */
 	public Game() {
 	}
 
 	/**
-	 * Paraméteres konstruktor
+	 * Paraméteres konstruktor.
 	 * 
 	 * @param id - egyedi azonosító
-	 * @param players - játékosok
+	 * @param players - játékosok, amely egy {@link fantasy.pojo.Players} objektum
 	 * @param whoWin - győztes
 	 */
 	public Game(String id, Players players, String whoWin) {
@@ -45,7 +49,7 @@ public class Game {
 	}
 	
 	/**
-	 * Visszadja a játék egyedi azonosítóját
+	 * Visszadja a játék egyedi azonosítóját.
 	 * 
 	 * @return - egyedi azonosító
 	 */
@@ -54,7 +58,7 @@ public class Game {
 	}
 	
 	/**
-	 * Beállítja a játék egyedi azonosítóját
+	 * Beállítja a játék egyedi azonosítóját.
 	 * 
 	 * @param id - egyedi azonosító
 	 */
@@ -64,7 +68,7 @@ public class Game {
 	}
 	
 	/**
-	 * Visszaadja a játékban résztvevő játékosokat
+	 * Visszaadja a játékban résztvevő játékosokat, amely egy {@link fantasy.pojo.Players} objektum.
 	 * 
 	 * @return játékosok
 	 */
@@ -73,9 +77,9 @@ public class Game {
 	}
 	
 	/**
-	 * Beállítja a játékban résztvető játékosokat
+	 * Beállítja a játékban résztvető játékosokat.
 	 * 
-	 * @param players - játékosok
+	 * @param players - játékosok, amely egy {@link fantasy.pojo.Players} objektum
 	 */
 	@XmlElement
 	public void setPlayers(Players players) {
@@ -83,16 +87,16 @@ public class Game {
 	}
 	
 	/**
-	 * Visszaadja a játék győztesét
+	 * Visszaadja a játék győztesét.
 	 * 
-	 * @return játék győztese
+	 * @return játék győztesét adja vissza
 	 */
 	public String getWhoWin() {
 		return whoWin;
 	}
 
 	/**
-	 * Beállítja a játék győztesét
+	 * Beállítja a játék győztesét.
 	 * 
 	 * @param whoWin - játék győztese
 	 */

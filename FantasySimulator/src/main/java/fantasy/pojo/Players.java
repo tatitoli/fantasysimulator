@@ -8,19 +8,20 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * @author TATITOLI
- * Játékban résztvevő játékosok egy listáját adja vissza
+ * 
+ *  Egy játékban résztvevő játékosok egy listáját adja vissza.
  */
 @XmlRootElement(name = "players")
 public class Players {
 	/**
-	 * Játékosok listája
+	 * Játékosok listája, amely egy {@link java.util.List} több {@link fantasy.pojo.Player} objektumot is tartalmazhat.
 	 */
 	List<Player> players;	
 
 	/**
-	 * Beállítja a játékosok egy listáját
+	 * Beállítja a játékosok egy listáját.
 	 * 
-	 * @param players - játékosok egy listája
+	 * @param players - játékosok egy listája, ahol egy {@link java.util.List} objektem több {@link fantasy.pojo.Player} objektumot is tartalmazhat.
 	 */
 	@XmlElement(name="player")
 	public void setPlayers(List<Player> players) {
@@ -28,9 +29,9 @@ public class Players {
 	}
 
 	/**
-	 * Hozzáad egy játékost a játékosok egy listjához
+	 * Hozzáad egy játékost a játékosok egy listjához.
 	 * 
-	 * @param player - játékos
+	 * @param player - játékos, amely egy {@link fantasy.pojo.Player} objektum
 	 */
 	public void add(Player player) {
 		if (this.players == null) {
@@ -40,9 +41,9 @@ public class Players {
 	}
 
 	/**
-	 * Visszadja a játékosok egy listáját
+	 * Visszadja a játékosok egy listáját.
 	 * 
-	 * @return játékosok egy listája
+	 * @return játékosok egy listája, ahol a {@link java.util.List} objektum több {@link fantasy.pojo.Player} objektumot is tartalmazhat
 	 */
 	public List<Player> getPlayers() {
 		return players;

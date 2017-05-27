@@ -6,8 +6,11 @@ import fantasy.pojo.Players;
 
 /**
  * @author TATITOLI
+ * 
  *	Player interface-t megvalósító osztály.
  */
+
+//CHECKSTYLE:OFF
 public class PlayerDaoImp implements PlayerDao {
 
 	@Override

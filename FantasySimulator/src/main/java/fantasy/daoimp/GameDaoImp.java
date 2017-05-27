@@ -18,30 +18,18 @@ import javafx.collections.ObservableList;
 
 import org.pmw.tinylog.Logger;
 
-/**
- * @author TATITOLI
- * GameDao interface-t megvalósító osztály.
- */
+//CHECKSTYLE:OFF
 public class GameDaoImp implements GameDao {
 	private ObservableList<Game> gameList = FXCollections.observableArrayList();
 
-	/**
-	 * @return
-	 */
 	public ObservableList<Game> getGameList() {
 		return gameList;
 	}
 
-	/**
-	 * @param gameList
-	 */
 	public void setGameList(ObservableList<Game> gameList) {
 		this.gameList = gameList;
 	}
 
-	/**
-	 * 
-	 */
 	private int[][] hitTable = new int[][]{
 		  { 45, 25, 5, 5, 5, 1, 1, 1, 1},
 		  { 85, 55, 45, 35, 25, 15, 5, 5, 5},
@@ -207,7 +195,6 @@ public class GameDaoImp implements GameDao {
 				Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 				readGames = (Games) jaxbUnmarshaller.unmarshal(file);
 			} catch (JAXBException e) {
-				// TODO Auto-generated catch block
 				Logger.error(e.getMessage());
 			}
         } else {
@@ -223,11 +210,10 @@ public class GameDaoImp implements GameDao {
 			jaxbContext = JAXBContext.newInstance( Games.class );
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 			jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
-			
 			jaxbMarshaller.marshal( games, new File( System.getProperty("user.home"), fileName ) );
+			Logger.info("Játék mentve");
 		} catch (JAXBException e) {
-			// TODO Auto-generated catch block
-			Logger.info(e.getMessage());
+			Logger.error(e.getMessage());
 		}
 	}
 }

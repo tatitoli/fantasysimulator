@@ -8,19 +8,20 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * @author TATITOLI
- *Az összes lejátszott játék reprezentáló osztály
+ * 
+ * Az lejátszott játékokat,meccseket reprezentáló osztály.
  */
 @XmlRootElement(name = "games")
 public class Games {
 	/**
-	 * Játékok egy listája
+	 * Játékok egy listájával tér vissza, ahol a {@link java.util.List} lista több {@link fantasy.pojo.Game} objektumot is tartalmazhat.
 	 */
 	List<Game> games;	
 
 	/**
-	 * Beállítja a játékok egy listáját
+	 * Beállítja a játékok egy listáját.
 	 * 
-	 * @param games
+	 * @param games - játékok, ahol {@link fantasy.pojo.Game} objektumok egy {@link java.util.List} típusú objektumát állítja be
 	 */
 	@XmlElement(name="game")
 	public void setGames(List<Game> games) {
@@ -28,9 +29,9 @@ public class Games {
 	}
 
 	/**
-	 * Játékot ad az eddegi lejátszott játékok listájához
+	 * Játék hozzáadása az eddegi lejátszott játékok listájához.
 	 * 
-	 * @param game - az adott játék
+	 * @param game - egy adott játék, ami egy {@link fantasy.pojo.Game} objektum
 	 */
 	public void add(Game game) {
 		if (this.games == null) {
@@ -40,9 +41,9 @@ public class Games {
 	}
 
 	/**
-	 * Játékok egy listájával tér vissza
+	 * Játékok egy listájával tér vissza.
 	 * 
-	 * @return játékok
+	 * @return játékok, ahol a {@link java.util.List} lista több {@link fantasy.pojo.Game} objektumot is tartalmazhat
 	 */
 	public List<Game> getGames() {
 		return games;

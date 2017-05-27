@@ -6,6 +6,7 @@ import java.util.Random;
 
 import javax.xml.bind.JAXBException;
 
+import org.apache.maven.plugin.logging.Log;
 import org.pmw.tinylog.Logger;
 
 import fantasy.daoimp.GameDaoImp;
@@ -21,6 +22,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+//CHECKSTYLE:OFF
 public class FightController {
 	private LocalDateTime localDateTime;
 	private Game game = new Game();
@@ -163,7 +165,6 @@ public class FightController {
 			try {
 				endGame(playerOne);
 			} catch (JAXBException e) {
-				// TODO Auto-generated catch block
 				Logger.error(e.getMessage());
 			}
 		}else{
@@ -191,6 +192,7 @@ public class FightController {
 		alert.setTitle("Vége a harcnak");
 		alert.setHeaderText(null);
 		alert.setContentText("Gratulálok, " + player.getName()+ " jött ki győztesen a küzdelemből!");
+		Logger.info("Gratulálok, " + player.getName()+ " jött ki győztesen a küzdelemből!");
 		alert.showAndWait();
 	}
 
@@ -227,7 +229,6 @@ public class FightController {
 			try {
 				endGame(playerTwo);
 			} catch (JAXBException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}else{

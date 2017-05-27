@@ -6,31 +6,32 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * @author TATITOLI
- *	Játékost reprezentáló osztály
+ * 
+ *	Egy játékost reprezentáló osztály.
  */
 @XmlRootElement(name="palyer")
 public class Player {
 	/**
-	 * Játékos egyedi azonosítója
+	 * Játékos egyedi azonosítója.
 	 */
 	String id;
 	/**
-	 * Játékos neve
+	 * Játékos neve.
 	 */
 	String name;
 	/**
-	 * Játékos karaktere
+	 * Játékos karaktere.
 	 */
 	Character character;
 	
 	/**
-	 * Paraméter nélküli konstruktor
+	 * Paraméter nélküli konstruktor.
 	 */
 	public Player(){
 	}
 	
 	/**
-	 * Paraméteres konstruktor
+	 * Paraméteres konstruktor.
 	 * 
 	 * @param id - egyedi azonosító
 	 * @param name - név
@@ -43,7 +44,7 @@ public class Player {
 	}
 	
 	/**
-	 * Visszadja a játékos egyedi azonosítóját
+	 * Visszadja a játékos egyedi azonosítóját.
 	 * 
 	 * @return egyedi azonosító
 	 */
@@ -52,7 +53,7 @@ public class Player {
 	}
 	
 	/**
-	 * Beállítja a játékos egyedi azonosítóját
+	 * Beállítja a játékos egyedi azonosítóját.
 	 * 
 	 * @param id - egyedi azonosító
 	 */
@@ -62,7 +63,7 @@ public class Player {
 	}
 	
 	/**
-	 * Visszadja a játékos nevét
+	 * Visszadja a játékos nevét.
 	 * 
 	 * @return játékos neve
 	 */
@@ -71,7 +72,7 @@ public class Player {
 	}
 	
 	/**
-	 * Beállítja a játékos nevét
+	 * Beállítja a játékos nevét.
 	 * 
 	 * @param name - játékos neve
 	 */
@@ -81,7 +82,7 @@ public class Player {
 	}
 	
 	/**
-	 * Visszadja a játékos karakterét
+	 * Visszadja a játékos karakterét.
 	 * 
 	 * @return játékos karaktere
 	 */
@@ -90,7 +91,7 @@ public class Player {
 	}
 	
 	/**
-	 * Beállítja a játékos karakterét
+	 * Beállítja a játékos karakterét.
 	 * 
 	 * @param character - játékos karaktere
 	 */

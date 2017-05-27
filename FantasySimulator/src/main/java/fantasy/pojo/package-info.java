@@ -1,4 +1,4 @@
 /**
- * A POJO-kért felelős csomag.
+ * A Modellekért felelős csomag.
  */
 package fantasy.pojo;

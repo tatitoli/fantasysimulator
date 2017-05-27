@@ -1,4 +1,4 @@
 /**
- * A felület kezeléséért felelős csomag.
+ * A felület kezeléséért és játékmenetért felelős csomag
  */
 package fantasy.view;
