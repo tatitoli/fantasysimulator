@@ -2,7 +2,7 @@
 
 Fantasy harc szimulátor, amelyben 2 játékos különböző fajokból választhat és előre meghatározott jártasság pontokat oszthat szét a   karakter 2 fő tulajdonsága között, amelyek kihatással vannak a tulajdonságaikra. A harc menete körökre osztott és valamely játékos „haláláig” tart.
 
-Új játék során a játékosoknak kötelezően meg kell adniuk a karakterek nevét, faját, illetve ki kell osztaniuk 10 jártasság pontot az Ügyesség és a Erő között. Ezek értéke fajonként különböző képpen hatással van az Életerőre, Mozgáspontra, Támadó értékre és a Védő értékre.
+Új játék során a játékosoknak kötelezően meg kell adniuk a karakterek nevét, faját, illetve ki kell osztaniuk 10 jártasság pontot az Ügyesség és az Erő között. Ezek értéke fajonként különböző képpen hatással van az Életerőre, Mozgáspontra, Támadó értékre és a Védő értékre.
 
 ### Fajok szerinti Mozgáspont számolás
 | Faj | Ügyesség szorzat |
